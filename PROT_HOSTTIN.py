@@ -68,6 +68,9 @@ def exibir_quartos():
 # Configurações principais
 app = QtWidgets.QApplication(sys.argv)
 tl_quarto = uic.loadUi("PROT_TELA_QUARTOS.ui")
+tl_quarto.setSizePolicy(QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Expanding)
+tl_quarto.showMaximized()  # Abre já maximizado
+
 
 # Conectar botões às funções
 tl_quarto.btn_cadastrar_quarto.clicked.connect(cadastar_novo_quarto)
